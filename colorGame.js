@@ -9,6 +9,7 @@ var h1 = document.querySelector("h1");
 var resetButton = document.querySelector("#reset");
 var modeButtons = document.querySelectorAll(".mode");
 var editionButton = document.querySelector("#edition");
+var editionTitle = document.querySelector("#editionTitle");
 
 init();
 
@@ -31,9 +32,11 @@ function editionChange() {
   if(edition) {
     edition = false;
     editionButton.textContent = "RGB";
+    editionTitle.textContent = "HEX";
   } else {
     edition = true;
     editionButton.textContent = "HEX";
+    editionTitle.textContent = "RGB";
   }
 }
 
